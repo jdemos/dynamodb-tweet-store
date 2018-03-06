@@ -3,11 +3,11 @@ Ruby code to create and manage a NoSQL database using the AWS DynamoDB service.
 
 ## Table of Contents
 - [Getting Started](#getting-started)
-  - AWS Setup
-  - Using DynamoDB (create a table, insert data)
-- Reference links (links to AWS docs and other helpful sites)
-- Notes
-- To Do Items
+  - [AWS Setup](#aws-setup)
+  - [Using DynamoDB](#using-dynamodb) (create a table, insert data)
+- [Reference links](#reference-links) (links to AWS docs and other helpful sites)
+- [Notes](#notes)
+- [To Do Items](#todo)
 
 ## Getting Started
 There are two things you need to do to work with DynamoDB: 1) Set up the AWS side of things. 2) Learn how to use the DynamoDB service.
@@ -19,7 +19,14 @@ Before you use the AWS DynamoDB service, you first need to have an AWS account a
 ```
 gem install aws-sdk-dynamodb
 ```
-3. Test
+NOTE: This repo uses [version 3](https://docs.aws.amazon.com/sdk-for-ruby/v3/api/index.html), of the AWS Ruby SDK which is modularized so you only need to install the specific gem for the service you are using (e.g., dynamodb). Alternatively, you can run `gem install gem 'aws-sdk', '~> 3'` which installs every available AWS service gem. This will take significantly longer to install.
+
+3. After the gem has successfully installed, I suggest running the `gem list` command to ensure you see the newly installed `aws-sdk-dynamodb` gem listed.
+4. Setup your environnent variables (e.g., ENV['AWS_ACCESS_KEY_ID']):
+  - Using environment variables, run the following commands:
+    1. export AWS_ACCESS_KEY_ID='INSERT-YOUR-KEY-ID-HERE'
+    2. export AWS_SECRET_ACCESS_KEY='INSERT-YOUR-SECRET-KEY-HERE'
+    3. export AWS_REGION='YOUR-REGION-HERE'
 
 ### Using DynamoDB
 1. This
