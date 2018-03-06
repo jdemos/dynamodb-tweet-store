@@ -14,7 +14,7 @@ There are two things you need to do to work with DynamoDB: 1) Set up the AWS sid
 
 ### AWS Setup
 Before you use the AWS DynamoDB service, you first need to have an AWS account and your IAM (credential system) in place. Here's how to do that:
-1. Get an AWS access key to use the AWS SDKs
+1. Get an AWS access key to use the AWS SDKs ([follow instructions here](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/SettingUp.DynamoWebService.html#SettingUp.DynamoWebService.GetCredentials))
 2. Install the AWS SDK for Ruby
 ```
 gem install aws-sdk-dynamodb
@@ -22,16 +22,16 @@ gem install aws-sdk-dynamodb
 NOTE: This repo uses [version 3](https://docs.aws.amazon.com/sdk-for-ruby/v3/api/index.html), of the AWS Ruby SDK which is modularized so you only need to install the specific gem for the service you are using (e.g., dynamodb). Alternatively, you can run `gem install gem 'aws-sdk', '~> 3'` which installs every available AWS service gem. This will take significantly longer to install.
 
 3. After the gem has successfully installed, I suggest running the `gem list` command to ensure you see the newly installed `aws-sdk-dynamodb` gem listed.
-4. Setup your environnent variables (e.g., ENV['AWS_ACCESS_KEY_ID']):
-  - Using environment variables, run the following commands:
+4. Setup your environnent variables by inserting the value (key, secret, region) and running each "export" command below.
     1. export AWS_ACCESS_KEY_ID='INSERT-YOUR-KEY-ID-HERE'
     2. export AWS_SECRET_ACCESS_KEY='INSERT-YOUR-SECRET-KEY-HERE'
-    3. export AWS_REGION='YOUR-REGION-HERE'
+    3. export AWS_REGION='YOUR-REGION-HERE' (e.g., us-west-2)
+    
+You can run the `printenv` command to see if the export commands above worked (look for each variable in the output).
 
 ### Using DynamoDB
-1. This
-2. That
-3. This
+1. Create a table
+2. Add items to that table
 
 ## Reference links
 The following list contains direct links to helpful AWS doc page and other sites that are a good point of reference for using Ruby to create and maintain a dynamoDB table:
